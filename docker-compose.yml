@@ -4,7 +4,8 @@ services:
     depends_on:
       - db
     build: .
-    container_name: self-learning
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
     ports:
       - 8080:8080
 
