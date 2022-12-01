@@ -1,8 +1,11 @@
 version: '3.8'
 services:
   self-learning:
+    depends_on:
+      - db
     build: .
-    container_name: self-learning
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
     ports:
       - 8080:8080
 
